@@ -1,0 +1,355 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 1000;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6347;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10%;
+  background-color: rgba(0, 0, 0, 0.347);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.homepage a {
+  color: #ff6347;
+}
+#cv {
+  padding: 40px;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  text-align: center;
+}
+#cv h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#cv p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.cv-button {
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.cv-button:visited {
+  color: #080302f6;
+}
+.cv-button:hover {
+  color: #ff4400f6;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 100px 10%;
+}
+
+section {
+  padding: 40px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+#home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.text-container {
+  flex-grow: 1;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 10px;
+}
+
+#profile {
+  width: 350px;
+  height: 350px;
+  border-radius: 0;
+  align-self: flex-start;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 10px;
+}
+
+.project a {
+  font-size: 1.5rem;
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+#contact a {
+  font-size: 1.2rem;
+  color: #a02525;
+  text-decoration: none;
+  padding: 2px;
+  border: 1px solid #131111;
+  border-style: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.347);
+  }
+  .navbar .logo {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #cv h2 {
+    font-size: 1.1rem;
+  }
+  #cv p {
+    font-size: 1.1rem;
+  }
+  #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  main {
+    margin-left: 220px;
+    padding-top: 40px;
+  }
+  #contact a {
+    font-size: 1.1rem;
+    color: #a02525;
+    text-decoration: none;
+  }
+  .project a {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 55px;
+      height: 100%;
+      padding: 12px 0;
+      background-color: rgba(0, 0, 0, 0.347);
+    }
+    .navbar .logo {
+      font-size: 12px;
+      font-weight: bold;
+      margin: 10px;
+    }
+    .navbar ul {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    .navbar ul li {
+      margin: 10px 0;
+    }
+
+    .navbar ul li a {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    main {
+      margin-left: 220px;
+      padding-top: 40px;
+    }
+    #cv h2 {
+      font-size: 0.7rem;
+    }
+    #cv p {
+      font-size: 0.7rem;
+    }
+    #home {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 0.7rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      margin-left: 0;
+    }
+    #about h2 {
+      font-size: 0.7rem;
+    }
+
+    section h2 {
+      font-size: 0.7rem;
+    }
+    #skills ul li,
+    .project h3,
+    .project a,
+    .project p,
+    #contact a,
+    #about,
+    footer {
+      font-size: 0.7rem;
+    }
+    #contact a {
+      font-size: 0.7rem;
+      color: #a02525;
+      text-decoration: none;
+    }
+  }
+}
